@@ -9,19 +9,23 @@
 #root{
     margin: 0;
     padding: 0; 
-    width: 100%;
+    // max-width: 1240px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 $red: #FF6060; 
 $black: #000000;
 $white: #ffffff;
+$grey-bg: #f6f6f6;
 
 body{
     width: 100%;
 }
 
 header{
-    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto; 
+    padding: 38px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,9 +37,10 @@ header{
         display: flex;
         justify-content: space-between;
         gap: 57px;
-        font-family: 'Montserrat', sans-serif;
+        color:$black;
         a{
             color: $black; 
+            font-size: 24px;
         }
         a.active{
             text-decoration: underline;
@@ -44,13 +49,103 @@ header{
 }
 
 .container{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.homeContainer{
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.bannerContainer{
+    position: relative;
     img{
         border-radius: 25px;
         height: 223px;
         width: 100%;
         object-fit: cover;
     }
+    &::after{
+        content: "";
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 223px;
+        background: $black;
+        opacity: 0.3;
+        border-radius: 25px;
+    }
+    h3{
+        color:$white; 
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        z-index: 200;
+    }
 }
+
+.galleryContainer {
+    background-color: $grey-bg;
+    border-radius: 25px;
+    padding: 50px;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+
+    .galleryCard {
+        width: calc((100% - 2 * 60px) / 3);
+        aspect-ratio: 1; // Définit l'aspect ratio (ratio largeur/hauteur) à 1:1
+        // height: 340px;
+        border-radius: 10px;
+        background: $red;
+        display: flex;
+        align-items: end;
+        justify-content: left;
+        position: relative;
+        h4 {
+            color: $white;
+            font-size: 18px;
+            font-weight: 700;
+            position: relative;
+            left: 20px;
+            bottom: 20px;
+            z-index: 200;
+            text-align: left;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
+            pointer-events: none;
+            border-radius: 10px;
+        }
+    }
+}
+
+// .container{
+//     img{
+//         border-radius: 25px;
+//         height: 223px;
+//         width: 100%;
+//         object-fit: cover;
+//     }
+// }
 
 footer{
     background-color: $black;
@@ -66,8 +161,44 @@ footer{
     }
     p{
         color: $white;
-        font-family: 'Montserrat', sans-serif;
         font-size: 24px;
         font-weight: 500;
+    }
+}
+
+.errorMsg{
+    display: flex;
+    flex-direction: column;
+    gap: 139px; 
+    justify-content: space-around;
+    h1{
+        font-size: 288px;
+        color: $red;
+    }
+    h2{
+        font-weight: 500;
+        color: $red;
+    }
+    a{
+        color:$black;
+        text-decoration: underline;
+    }
+}
+
+.aboutContainer{
+    display: flex; 
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 38px 0;
+    button{
+        background: $red;
+        width: 1000px;
+        color: $white;
+        font-weight: 700;
+        font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
