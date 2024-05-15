@@ -6,7 +6,7 @@ import { HousingDetails } from './pages/HousingDetails'
 import { ErrorPage } from './pages/ErrorPage'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
-import { GalleryCard } from './components/GalleryCard'
+import { GalleryCards } from './components/GalleryCard'
 import { Dropdown } from './components/Dropdown'
 
 const router = createBrowserRouter([
@@ -26,12 +26,7 @@ const router = createBrowserRouter([
               <h3>Chez vous, partout et ailleurs.</h3>
             </div>
             <div className="galleryContainer">
-              <GalleryCard />
-              <GalleryCard />
-              <GalleryCard />
-              <GalleryCard />
-              <GalleryCard />
-              <GalleryCard />
+              <GalleryCards />
             </div>
           </div>
         </>
