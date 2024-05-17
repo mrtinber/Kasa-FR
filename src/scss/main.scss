@@ -40,6 +40,7 @@ header{
         a{
             color: $black; 
             font-size: 24px;
+            text-decoration: none;
         }
         a.active{
             text-decoration: underline;
@@ -108,7 +109,7 @@ header{
         aspect-ratio: 1; // Définit l'aspect ratio (ratio largeur/hauteur) à 1:1
         // height: 340px;
         border-radius: 10px;
-        background: $red;
+        // background: $red;
         display: flex;
         align-items: end;
         justify-content: left;
@@ -199,82 +200,116 @@ footer{
     padding: 38px 0;
 }
 
-.dropdownBtn{
-    background: $red;
+.collapse{
     width: 1000px;
-    color: $white;
-    font-weight: 700;
-    font-size: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.housePicture{
-    width: 100%;
-    height: 415px;
-    object-fit: cover;
-    border-radius: 25px;
-}
-
-.houseDetails{
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    position:relative; 
-    gap: 20px;
-    h2{
-        font-size: 36px;
-        font-weight: 500;
-        color: $red;
-    }
-    h3{
-        color: $black;
-        font-size: 18px;
-        font-weight: 500;
-    }
-    .tagContainer{
+    .collapse_btn{
+        background: $red;
+        width: 100%;
+        color: $white;
+        font-weight: 700;
+        font-size: 24px;
         display: flex;
-        flex-direction: row;
-        gap: 10px;
-        button{
-            background: $red;
-            color: $white;
-            font-size: 14px;
-            font-weight: 700;
-            height: 25px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-    .hostDetails{
-        display: flex;
-        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        position: absolute;
-        right: 0;
-        top: 0;
-        gap: 10px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: none;
         img{
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
         }
-        h4{
+        img.active{
+            transform: rotate(180deg);
+        }
+    }
+    
+    .collapse_content{
+        max-height: 0px;
+        opacity: 0;
+        width: 100%;
+        padding: 0 20px;
+        background-color: $white;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        &.active{
+            padding: 20px;
+            max-height: 999px;
+            opacity: 1;
+        }
+    }
+}
+
+.houseWrapper{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    .housePicture{
+        width: 100%;
+        height: 415px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    
+    .houseDetails{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        position:relative; 
+        gap: 24px;
+        h2{
+            font-size: 36px;
+            font-weight: 500;
             color: $red;
+        }
+        h3{
+            color: $black;
             font-size: 18px;
             font-weight: 500;
         }
-    }
-    .btnContainer{
-        display:flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        button{
-            width: calc((100% - 76px) / 2);
+        .tagContainer{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            button{
+                background: $red;
+                color: $white;
+                font-size: 14px;
+                font-weight: 700;
+                height: 25px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px 20px;
+                border: none;
+            }
+        }
+        .hostDetails{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            gap: 10px;
+            img{
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+            }
+            h4{
+                color: $red;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+        .btnContainer{
+            display:flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            .collapse{
+                width: calc((100% - 76px) / 2);
+            }
         }
     }
 }

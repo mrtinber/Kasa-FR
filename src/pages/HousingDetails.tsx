@@ -1,16 +1,16 @@
 import { useParams } from "react-router-dom";
-import Houses from '../data/houses.json';
-import { Dropdown } from "../components/Dropdown";
+import houses from '../data/houses.json';
+import { Collapse } from "../components/Collapse";
 
 export function HousingDetails() {
     const { id } = useParams();
 
-    const currentHouse = Houses.find(house => house.id === id);
+    const currentHouse = houses.find(house => house.id === id);
 
     return (
         <div>
             {currentHouse && (
-                <>
+                <div className="houseWrapper">
                     <img src={currentHouse.cover} alt={currentHouse.title} className="housePicture" />
                     <div className="houseDetails">
                         <div>
@@ -28,11 +28,13 @@ export function HousingDetails() {
                             <img src={currentHouse.host.picture} alt={`Une photo de ${currentHouse.host.name}`} />
                         </div>
                         <div className="btnContainer">
-                            <Dropdown text='Description' />
-                            <Dropdown text='Equipements' />
+                            <Collapse text='Description' content={currentHouse.description}/>
+                            <Collapse text='Equipements' />
+                            {/* <Dropdown text='Description' content={[currentHouse.description]}/>
+                            <Dropdown text='Equipements' content={currentHouse.equipments}/> */}
                         </div>
                     </div>
-                </>
+                </div>
             )}
         </div>
     );

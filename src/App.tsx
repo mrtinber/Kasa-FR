@@ -1,13 +1,12 @@
 import './scss/main.scss'
 
-import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { HousingDetails } from './pages/HousingDetails'
 import { ErrorPage } from './pages/ErrorPage'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { GalleryCards } from './components/GalleryCard'
-import { Dropdown } from './components/Dropdown'
+import { Collapse } from './components/Collapse'
 
 const router = createBrowserRouter([
   {
@@ -38,10 +37,10 @@ const router = createBrowserRouter([
             <img className="bannerImg" src="/about-pic.png" alt="Un paysage avec des montagnes" />
           </div>
           <div className='aboutContainer'>
-            <Dropdown text="Fiabilité"/>
-            <Dropdown text="Respect"/>
-            <Dropdown text="Service"/>
-            <Dropdown text="Sécurité"/>
+            <Collapse text="Fiabilité" content='Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.'/>
+            <Collapse text="Respect" content='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme.'/>
+            <Collapse text="Service" content='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme.'/>
+            <Collapse text="Sécurité" content='La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services.'/>
           </div>
         </>
       }, 

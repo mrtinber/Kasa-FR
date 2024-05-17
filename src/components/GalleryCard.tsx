@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom'
-import Houses from '../data/houses.json'
+import houses from '../data/houses.json'
 
 export function GalleryCards() {
     return <>
 
-        {Houses && Houses.map(house => {
+        {houses && houses.map(house => {
             return (
                 <NavLink className="galleryCard" to={`/details/${house.id}`} key={house.id}>
                         <img src={house.cover} alt="" />
