@@ -242,6 +242,10 @@ footer {
         overflow: hidden;
         transition: all 0.3s ease;
 
+        li {
+            list-style: none;
+        }
+
         &.active {
             padding: 20px;
             max-height: 999px;
@@ -280,6 +284,7 @@ footer {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+
                 &_infos {
                     h2 {
                         font-size: 36px;
@@ -293,11 +298,12 @@ footer {
                         font-weight: 500;
                     }
                 }
+
                 &_tags {
                     display: flex;
                     flex-direction: row;
                     gap: 10px;
-        
+
                     button {
                         background: $red;
                         color: $white;
