@@ -20,11 +20,11 @@ const router = createBrowserRouter([
         path: '',
         element: <>
           <div className='homeContainer'>
-            <div className="bannerContainer">
-              <img className="bannerImg" src="/home-pic.png" alt="Des falaises et une plage mais il ne fait pas beau" />
+            <div className="banner">
+              <img className="banner_img" src="/home-pic.png" alt="Des falaises et une plage mais il ne fait pas beau" />
               <h3>Chez vous, partout et ailleurs.</h3>
             </div>
-            <div className="galleryContainer">
+            <div className="gallery">
               <GalleryCards />
             </div>
           </div>
@@ -33,10 +33,10 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <>
-          <div className="bannerContainer">
-            <img className="bannerImg" src="/about-pic.png" alt="Un paysage avec des montagnes" />
+          <div className="banner">
+            <img className="banner_img" src="/about-pic.png" alt="Un paysage avec des montagnes" />
           </div>
-          <div className='aboutContainer'>
+          <div className='about_container'>
             <Collapse text="Fiabilité" content='Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.'/>
             <Collapse text="Respect" content='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme.'/>
             <Collapse text="Service" content='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entrainera une exclusion de notre plateforme.'/>
