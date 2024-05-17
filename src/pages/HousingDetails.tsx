@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import houses from '../data/houses.json';
 import { Collapse } from "../components/Collapse";
 import { ErrorPage } from "./ErrorPage";
+import { Rating } from "../components/Rating";
 
 export function HousingDetails() {
     const { id } = useParams();
@@ -37,11 +38,7 @@ export function HousingDetails() {
                                     <img src={currentHouse.host.picture} alt={`Une photo de ${currentHouse.host.name}`} />
                                 </div>
                                 <div className="house_wrapper_details_main_right_rating">
-                                    <img src="../red-star.svg" alt="Etoile remplie" />
-                                    <img src="../red-star.svg" alt="Etoile remplie" />
-                                    <img src="../red-star.svg" alt="Etoile remplie" />
-                                    <img src="../red-star.svg" alt="Etoile vide" />
-                                    <img src="../grey-star.svg" alt="Etoile vide" />
+                                    <Rating />
                                 </div>
                             </div>
                         </div>

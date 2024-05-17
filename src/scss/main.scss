@@ -346,9 +346,11 @@ footer {
                 }
 
                 &_rating {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
                     img {
                         width: 24px;
-
                     }
                 }
             }
