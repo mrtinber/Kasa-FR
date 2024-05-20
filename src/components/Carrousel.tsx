@@ -37,6 +37,12 @@ export function Carrousel({ pictures, title }: CarrouselProps) {
         });
     }
 
+    if (pictures.length <= 1) {
+        return <div className="house_wrapper_carrousel">
+            <img key={`current-${timestamp}`} src={pictureDisplayed} alt={title} className="house_wrapper_carrousel_picture" onError={() => console.error(`Failed to load image: ${pictureDisplayed}`)} />
+        </div>
+    }
+
     return <div className="house_wrapper_carrousel">
         <img key={`prev-${timestamp}`} // Clé unique pour forcer le re-rendu
             src="../chevron-left.svg" alt="Photo précédente" className="house_wrapper_carrousel_previous" onClick={handlePrev} />

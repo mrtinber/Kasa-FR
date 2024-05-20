@@ -14,14 +14,15 @@ body {
 .container {
     max-width: 1240px;
     margin: 50px auto;
-}
-
-.homeContainer {
-    max-width: 1240px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 38px;
+}
+
+@media screen and (max-width:1025px) {
+    .container {
+        margin: 50px;
+    }
 }
 
 @media screen and (max-width:426px) {
@@ -31,9 +32,6 @@ body {
 
     .container {
         margin: 27px auto;
-    }
-
-    .homeContainer {
         gap: 22px;
     }
 }
