@@ -259,11 +259,38 @@ footer {
     flex-direction: column;
     gap: 20px;
 
-    .housePicture {
-        width: 100%;
-        height: 415px;
-        object-fit: cover;
-        border-radius: 25px;
+    &_carrousel {
+        position: relative;
+
+        &_picture {
+            width: 100%;
+            height: 415px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        &_previous {
+            position: absolute;
+            height: 80px;
+            top: calc((100% - 80px) / 2);
+            left: 24px;
+        }
+
+        &_next {
+            position: absolute;
+            height: 80px;
+            right: 24px;
+            top: calc((100% - 80px) / 2);
+        }
+
+        &_index {
+            position: absolute;
+            left: 50%;
+            color: $white;
+            bottom: 25px;
+            font-size: 18px;
+            font-weight: 500;
+        }
     }
 
     &_details {
@@ -349,6 +376,7 @@ footer {
                     display: flex;
                     flex-direction: row;
                     gap: 10px;
+
                     img {
                         width: 24px;
                     }

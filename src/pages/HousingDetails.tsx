@@ -3,6 +3,7 @@ import houses from '../data/houses.json';
 import { Collapse } from "../components/Collapse";
 import { ErrorPage } from "./ErrorPage";
 import { Rating } from "../components/Rating";
+import { Carrousel } from "../components/Carrousel";
 
 export function HousingDetails() {
     const { id } = useParams();
@@ -17,7 +18,7 @@ export function HousingDetails() {
         <div>
             {currentHouse && (
                 <div className="house_wrapper">
-                    <img src={currentHouse.cover} alt={currentHouse.title} className="housePicture" />
+                    <Carrousel pictures={currentHouse.pictures} title={currentHouse.title}/> 
                     <div className="house_wrapper_details">
                         <div className="house_wrapper_details_main">
                             <div className="house_wrapper_details_main_left">
