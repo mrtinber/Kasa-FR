@@ -1,0 +1,63 @@
+.collapse {
+    width: 1000px;
+
+    &_btn {
+        background: $red;
+        width: 100%;
+        color: $white;
+        font-weight: 700;
+        font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: none;
+
+        img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img.active {
+            transform: rotate(180deg);
+        }
+    }
+
+    &_content {
+        max-height: 0px;
+        opacity: 0;
+        width: 100%;
+        padding: 0 20px;
+        background-color: $white;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        li {
+            list-style: none;
+        }
+
+        &.active {
+            padding: 20px;
+            max-height: 999px;
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width:426px) {
+    .collapse {
+        width: 100%;
+
+        &_btn {
+            font-size: 13px;
+
+            img {
+                width: 16px;
+            }
+        }
+
+        &_content {
+            font-size: 12px;
+        }
+    }
+}

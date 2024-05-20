@@ -1,0 +1,71 @@
+.gallery {
+    background-color: $grey-bg;
+    border-radius: 25px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+
+    &_card {
+        width: calc((100% - 2 * 60px) / 3);
+        aspect-ratio: 1; // Définit l'aspect ratio (ratio largeur/hauteur) à 1:1
+        // height: 340px;
+        border-radius: 10px;
+        // background: $red;
+        display: flex;
+        align-items: end;
+        justify-content: left;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        h4 {
+            color: $white;
+            font-size: 18px;
+            font-weight: 700;
+            position: absolute;
+            padding: 0 20px;
+            bottom: 20px;
+            z-index: 200;
+            text-align: left;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
+            pointer-events: none;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:426px) {
+    .gallery {
+        flex-direction: column;
+        background-color: $white;
+        gap: 20px;
+        padding: 0;
+
+        &_card {
+            width: 100%;
+        }
+    }
+}

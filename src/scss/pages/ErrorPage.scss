@@ -1,0 +1,44 @@
+.error_msg {
+    display: flex;
+    flex-direction: column;
+    gap: 139px;
+    margin: 50px 0;
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+        font-size: 288px;
+        color: $red;
+    }
+
+    h2 {
+        font-weight: 500;
+        color: $red;
+    }
+
+    a {
+        color: $black;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width:426px) {
+    .error_msg {
+        margin: 113px 0;
+        gap: 113px;
+
+        h1 {
+            font-size: 96px;
+        }
+
+        h2 {
+            font-size: 18px;
+            text-align: center;
+            // width: 260px;
+        }
+
+        a {
+            font-size: 14px;
+        }
+    }
+}
