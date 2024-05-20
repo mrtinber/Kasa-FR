@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export function Header() {
   return (<>
@@ -11,9 +11,6 @@ export function Header() {
         <NavLink to='/about'>A propos</NavLink>
       </nav>
     </header>
-    <div className="container">
-      <Outlet />
-    </div>
   </>
   )
 }

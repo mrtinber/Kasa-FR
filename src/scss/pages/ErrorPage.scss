@@ -24,7 +24,7 @@
 
 @media screen and (max-width:426px) {
     .error_msg {
-        margin: 113px 0;
+        margin: 113px 20px;
         gap: 113px;
 
         h1 {
@@ -34,7 +34,6 @@
         h2 {
             font-size: 18px;
             text-align: center;
-            // width: 260px;
         }
 
         a {

@@ -26,12 +26,8 @@ body {
 }
 
 @media screen and (max-width:426px) {
-    body {
-        padding: 20px;
-    }
-
     .container {
-        margin: 27px auto;
+        margin: 27px 20px;
         gap: 22px;
     }
 }
