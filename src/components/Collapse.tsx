@@ -12,8 +12,6 @@ export function Collapse({ text, content }: CollapseProps) {
         setToggle(!toggle)
     }
 
-    console.log(toggle);
-
     return (
         <div className="collapse">
             <button onClick={toggleState} className="collapse_btn">{text}<img className={toggle ? "active" : ""} src="/chevron-up.svg" alt="Flèche vers le haut" /></button>

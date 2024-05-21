@@ -6,7 +6,7 @@ export function Rating() {
 
     const currentHouse = houses.find(house => house.id === id);
 
-    if(!currentHouse) {
+    if (!currentHouse) {
         return null
     }
 
@@ -19,17 +19,17 @@ export function Rating() {
     return (
         <>
             {[...Array(5)].map((_, index) => (
-                <Star key={index} filled={index < currentRating}/>
+                <Star key={index} filled={index < currentRating} />
             ))}
         </>
     );
 }
 
 type StarProps = {
-    filled : boolean;
+    filled: boolean;
 }
 
-function Star({filled}: StarProps){
-    const src = filled? '../red-star.svg' : '../grey-star.svg';
+function Star({ filled }: StarProps) {
+    const src = filled ? '../red-star.svg' : '../grey-star.svg';
     return <img src={src} alt="Une étoile" />
 }
