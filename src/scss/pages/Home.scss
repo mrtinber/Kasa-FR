@@ -9,14 +9,14 @@
 
     &_card {
         width: calc((100% - 2 * 60px) / 3);
-        aspect-ratio: 1; // Définit l'aspect ratio (ratio largeur/hauteur) à 1:1
-        // height: 340px;
+        aspect-ratio: 1;
         border-radius: 10px;
         // background: $red;
         display: flex;
         align-items: end;
         justify-content: left;
         position: relative;
+        transition: box-shadow 0.3s ease;
 
         img {
             width: 100%;
@@ -53,6 +53,10 @@
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
             pointer-events: none;
             border-radius: 10px;
+        }
+
+        &:hover{
+            box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.3);
         }
     }
 }

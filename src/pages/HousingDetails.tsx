@@ -1,17 +1,24 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import houses from '../data/houses.json';
 import { Collapse } from "../components/Collapse";
-import { ErrorPage } from "./ErrorPage";
 import { Rating } from "../components/Rating";
 import { Carrousel } from "../components/Carrousel";
+import { useEffect } from "react";
 
 export function HousingDetails() {
     const { id } = useParams();
+    const navigate = useNavigate();
 
     const currentHouse = houses.find(house => house.id === id);
+    
+    useEffect(() => {
+        if (!currentHouse) {
+            navigate('/error');
+        }
+    }, [currentHouse, navigate]);
 
     if (!currentHouse) {
-        return <ErrorPage />
+        return null;
     }
 
     return (

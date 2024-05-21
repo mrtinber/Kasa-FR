@@ -26,15 +26,6 @@ export function Carrousel({ pictures, title }: CarrouselProps) {
         }
     }
 
-
-    // const handleNext = () => {
-    //     setPictureIndex((prevIndex) => (prevIndex >= pictures.length - 1 ? 0 : prevIndex + 1));
-    // };
-
-    // const handlePrev = () => {
-    //     setPictureIndex((prevIndex) => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1));
-    // };
-
     if (pictures.length <= 1) {
         return <div className="house_wrapper_carrousel">
             <div className="house_wrapper_carrousel_wrapper">
