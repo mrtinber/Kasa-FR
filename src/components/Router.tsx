@@ -18,26 +18,26 @@ const Layout = () => (
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/Kasa-FR/',
         element: (
             <Layout />
         ),
         errorElement: <ErrorPage />,
         children: [
             {
-                path: '',
+                path: '/Kasa-FR/',
                 element: <Home />
             },
             {
-                path: 'about',
+                path: '/Kasa-FR/about',
                 element: <About />
             },
             {
-                path: 'details/:id',
+                path: '/Kasa-FR/details/:id',
                 element: <HousingDetails />
             }, 
             {
-                path: 'error',
+                path: '/Kasa-FR/error',
                 element: <ErrorPage />
             }
         ]
