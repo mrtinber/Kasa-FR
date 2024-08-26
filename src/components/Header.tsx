@@ -7,7 +7,7 @@ export function Header() {
         <img src="./red-logo.svg" alt="Le logo en rouge" />
       </NavLink>
       <nav>
-        <NavLink to='/Kasa-FR/'>Accueil</NavLink>
+        <NavLink to='/Kasa-FR/' end>Accueil</NavLink>
         <NavLink to='/Kasa-FR/about'>A propos</NavLink>
       </nav>
     </header>

@@ -7,7 +7,7 @@ export function GalleryCards() {
         {houses && houses.map(house => {
             return (
                 <NavLink className="gallery_card" to={`/Kasa-FR/details/${house.id}`} key={house.id}>
-                    <img src={house.cover} alt="" />
+                    <img src={house.cover} alt="Photo du logement" />
                     <h4>{house.title}</h4>
                 </NavLink>
             )
