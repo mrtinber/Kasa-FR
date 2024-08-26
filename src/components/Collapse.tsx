@@ -14,7 +14,7 @@ export function Collapse({ text, content }: CollapseProps) {
 
     return (
         <div className="collapse">
-            <button onClick={toggleState} className="collapse_btn">{text}<img className={toggle ? "active" : ""} src="/chevron-up.svg" alt="Flèche vers le haut" /></button>
+            <button onClick={toggleState} className="collapse_btn">{text}<img className={toggle ? "active" : ""} src="./chevron-up.svg" alt="Flèche vers le haut" /></button>
             <div className={toggle ? "collapse_content active" : "collapse_content"}>
                 {Array.isArray(content) ? (
                     <ul>

@@ -45,7 +45,7 @@ export function Carrousel({ pictures, title }: CarrouselProps) {
             ))}
         </div>
         <div className="house_wrapper_carrousel_index">{pictureIndex + 1}/{pictures.length}</div>
-        <img src="../chevron-left.svg" alt="Photo précédente" className="house_wrapper_carrousel_previous" onClick={handlePrev} />
-        <img src="../chevron-right.svg" alt="Photo suivante" className="house_wrapper_carrousel_next" onClick={handleNext} />
+        <img src="./chevron-left.svg" alt="Photo précédente" className="house_wrapper_carrousel_previous" onClick={handlePrev} />
+        <img src="./chevron-right.svg" alt="Photo suivante" className="house_wrapper_carrousel_next" onClick={handleNext} />
     </div>
 }
