@@ -1,16 +1,20 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import { RedLogo } from "../assets/icons/RedLogo";
 
 export function Header() {
-  return (<>
-    <header>
-      <NavLink to='/Kasa-FR/'>
-        <img src="./red-logo.svg" alt="Le logo en rouge" />
-      </NavLink>
-      <nav>
-        <NavLink to='/Kasa-FR/' end>Accueil</NavLink>
-        <NavLink to='/Kasa-FR/about'>A propos</NavLink>
-      </nav>
-    </header>
-  </>
-  )
+    return (
+        <>
+            <header>
+                <NavLink to="/Kasa-FR/">
+                    <RedLogo />
+                </NavLink>
+                <nav>
+                    <NavLink to="/Kasa-FR/" end>
+                        Accueil
+                    </NavLink>
+                    <NavLink to="/Kasa-FR/about">A propos</NavLink>
+                </nav>
+            </header>
+        </>
+    );
 }

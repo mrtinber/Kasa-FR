@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { ChevronLeft } from "../assets/icons/ChevronLeft"
+import { ChevronRight } from "../assets/icons/ChevronRight"
 
 type CarrouselProps = {
     pictures: string[],
@@ -45,7 +47,7 @@ export function Carrousel({ pictures, title }: CarrouselProps) {
             ))}
         </div>
         <div className="house_wrapper_carrousel_index">{pictureIndex + 1}/{pictures.length}</div>
-        <img src="../chevron-left.svg" alt="Photo précédente" className="house_wrapper_carrousel_previous" onClick={handlePrev} />
-        <img src="../chevron-right.svg" alt="Photo suivante" className="house_wrapper_carrousel_next" onClick={handleNext} />
+        <ChevronLeft className="house_wrapper_carrousel_previous" aria="Photo précédente" onClick={handlePrev} />
+        <ChevronRight className="house_wrapper_carrousel_next" aria="Photo suivante" onClick={handleNext} />
     </div>
 }

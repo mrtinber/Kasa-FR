@@ -1,9 +1,10 @@
 import { Collapse } from "../components/Collapse"
+import AboutBanner from '../assets/pictures/about-pic.png'
 
 export function About() {
   return <>
     <div className="banner">
-      <img className="banner_img" src="./about-pic.png" alt="Un paysage avec des montagnes" />
+      <img className="banner_img" src={AboutBanner} alt="Un paysage avec des montagnes" />
     </div>
     <div className='about_container'>
       <Collapse text="Fiabilité" content='Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.' />

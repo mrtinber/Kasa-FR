@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 import houses from '../data/houses.json'
+import { RedStar } from '../assets/icons/RedStar';
+import { GreyStar } from '../assets/icons/GreyStar';
 
 export function Rating() {
     const { id } = useParams();
@@ -30,6 +32,6 @@ type StarProps = {
 }
 
 function Star({ filled }: StarProps) {
-    const src = filled ? '../red-star.svg' : '../grey-star.svg';
-    return <img src={src} alt="Une étoile" />
+    const src = filled ? <RedStar size={24}/> : <GreyStar size={24} />;
+    return src
 }
